@@ -13,6 +13,7 @@
   --footer-text-color: #e7e9fc;
   --active-button-color: #404bbf;
   --subtitle-text: #8e8f99;
+  --footer-icon-hover: #31d0aa;
 }
 
 body {
@@ -306,6 +307,10 @@ body {
   background-size: contain;
 }
 
+.social.list .item .link:hover,
+.social.list .item .link:focus {
+  background-color: var(--active-button-color);
+}
 .link-icon {
   height: 16px;
   width: 16px;
@@ -330,12 +335,21 @@ body {
   align-items: center;
   width: 168px;
   height: 88px;
-
   background-color: var(--hero-text-color);
   border: 1px solid var(--subtitle-text);
   border-radius: 4px;
-
   background-repeat: no-repeat;
+  color: var(--subtitle-text);
+}
+
+.customers.list .link:hover,
+.customers.list .link:focus {
+  border-color: var(--active-button-color);
+  color: var(--active-button-color);
+}
+
+.icon {
+  fill: currentColor;
 }
 
 /* main porfolio projects */
@@ -450,11 +464,21 @@ body {
 .social-footer .social.list {
   justify-content: flex-start;
 }
+
+.social-footer .social.list .item + .item {
+  margin-left: 16px;
+}
+
 .social-footer .social.list .item .link {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-footer .social.list .item .link:hover,
+.social-footer .social.list .item .link:focus {
+  background-color: var(--footer-icon-hover);
 }
 
 .social-footer .link-icon {
